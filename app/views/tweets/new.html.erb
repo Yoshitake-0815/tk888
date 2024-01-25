@@ -1,0 +1,50 @@
+<header>
+      <div class="header_container">
+      <%= link_to root_path do %>
+      NewYorkCityMap
+      <% end %>
+      
+        
+        <% if user_signed_in? %>
+        
+        
+          <%= link_to "Mypage", user_path(current_user.id) %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", tweets_path %>
+          <%= link_to "SignUp", new_user_registration_path %>
+        <% end %>
+
+        <%= link_to 'Manhattan', manhattans_path %>
+        <%= link_to 'Brooklyn', brooklyns_path %>
+        <%= link_to 'Bronx', brons_path %>
+        <%= link_to 'Queens', queens_path %>
+        <%= link_to 'Statenisland', statenislands_path %>
+
+        <%= link_to '診断', shindans_path %>
+
+        </div>
+    
+  </header>
+
+<h1>Your Recomend</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :名所 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :感想  %>
+    <%= f.text_area :about, :size => "30x2" %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", tweets_path %>

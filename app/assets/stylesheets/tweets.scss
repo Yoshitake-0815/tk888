@@ -1,0 +1,56 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+a{
+    text-decoration: none;
+}
+
+header a{
+    background-color:white;
+    color: black;
+}
+
+.top-first-block{
+    height:100vh;
+    background-color:antiquewhite;
+    display: flex;
+    gap:300px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:80px;
+}
+
+.second-block ul{
+    list-style: none;
+    font-size:80px;
+
+}
+
+.ma-second-block{
+    display: flex;
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    body { margin: 0; } 
+    div#slider { overflow: hidden; }
+    div#slider figure img { width: 20%;height: 95vh; float: left; }
+    div#slider figure { 
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite; 
+    }
+    

@@ -1,0 +1,2 @@
+module BronsHelper
+end

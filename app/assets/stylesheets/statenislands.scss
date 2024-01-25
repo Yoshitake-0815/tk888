@@ -1,0 +1,33 @@
+// Place all the styles related to the statenislands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.header{
+    background-color:transparent;
+    font-family:'Times New Roman', Times, serif;
+    font-size:30px;
+    word-spacing: 0.5em;
+    color:#0a0a0a;
+}
+
+.statenisland-first-block{
+    background-image: url("staten.jpg");
+    background-size: cover; /* 画像を要素にカバーさせる */
+    background-position: center center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
+    height:95vh;
+}
+
+.statenisland-second-block{
+    background-color: white;
+    font-family:'Times New Roman', Times, serif;
+    height:100vh;
+    text-align: center;
+    font-size:80px;
+}
+
+.statenisland-third-block ul{
+    display: flex;
+    list-style: none;
+    gap:40px;
+}

@@ -1,0 +1,48 @@
+<header>
+                <div class="header_container">
+                <%= link_to root_path do %>
+                NewYorkCityMap
+                <% end %>
+                
+                <% if user_signed_in? %>
+                
+                
+                <%= link_to "Mypage", user_path(current_user.id) %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+                <% else %>
+                <%= link_to "Login", tweets_path %>
+                <%= link_to "SignUp", new_user_registration_path %>
+                <% end %>
+
+                <%= link_to 'Manhattan', manhattans_path %>
+                <%= link_to 'Brooklyn', brooklyns_path %>
+                <%= link_to 'Bronx', brons_path %>
+                <%= link_to 'Queens', queens_path %>
+                <%= link_to 'Statenisland', statenislands_path %>
+
+                <%= link_to '診断', shindans_path %>
+</header>
+
+<div id="slider">
+<figure>
+<img src="https://24.media.tumblr.com/61e1f6d73861cfad6e320c6d5dcecc6e/tumblr_mx3trrzUOJ1st5lhmo1_1280.jpg" alt="">
+<img src="https://31.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg" alt="">
+<img src="https://25.media.tumblr.com/d7c46e775fa6d6c613f10bceb2703b38/tumblr_mx3tqsqckF1st5lhmo1_1280.jpg" alt="">
+<img src="https://31.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg" alt="">
+<img src="https://25.media.tumblr.com/d7c46e775fa6d6c613f10bceb2703b38/tumblr_mx3tqsqckF1st5lhmo1_1280.jpg" alt="">
+</figure>
+</div>
+
+<div  class="top-first-block">
+
+ <ul>
+  <li><%= link_to 'Manhattan', manhattans_path %></li>
+  <li><%= link_to 'Brooklyn', brooklyns_path %></li>
+  <li><%= link_to 'Bronx', brons_path %></li>
+  <li><%= link_to 'Queens', queens_path %></li>
+  <li><%= link_to 'Statenisland', statenislands_path %></li>
+ </ul>
+
+ <%= image_tag "map.gif", size: '730x730' %>
+
+</div>

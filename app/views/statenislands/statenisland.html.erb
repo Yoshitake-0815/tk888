@@ -1,0 +1,48 @@
+<header>
+      <div class="header">
+      <%= link_to root_path do %>
+      NewYorkCityMap
+      <% end %>
+      
+        
+        <% if user_signed_in? %>
+        
+        
+          <%= link_to "Mypage", user_path(current_user.id) %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", tweets_path %>
+          <%= link_to "SignUp", new_user_registration_path %>
+        <% end %>
+
+        <%= link_to 'Manhattan', manhattans_path %>
+        <%= link_to 'Brooklyn', brooklyns_path %>
+        <%= link_to 'Bronx', brons_path %>
+        <%= link_to 'Queens', queens_path %>
+        <%= link_to 'Statenisland', statenislands_path %>
+
+        <%= link_to '診断', shindans_path %>
+
+        </div>
+    
+</header>
+
+<div class="statenisland-first-block
+
+    <li><%= image_tag "manhattan.jpeg", size: '730x730' %></li>
+
+</div>
+
+<div class="statenisland-second-block">
+    <h1></h1>
+    <h2>Wellcome to Staten Island!</h2>
+</div>
+
+<div class="statenisland-third-block">
+ 
+    <ul>
+    <li><%= image_tag "map.gif", size: '730x730' %></li>
+    <li>Staten Island</li>
+    </ul>
+
+</div>

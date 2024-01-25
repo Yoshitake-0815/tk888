@@ -1,0 +1,38 @@
+<header>
+      <div class="header">
+      <%= link_to root_path do %>
+      NewYorkCityMap
+      <% end %>
+      
+        
+        <% if user_signed_in? %>
+        
+        
+          <%= link_to "Mypage", user_path(current_user.id) %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", tweets_path %>
+          <%= link_to "SignUp", new_user_registration_path %>
+        <% end %>
+
+        <%= link_to 'Manhattan', manhattans_path %>
+        <%= link_to 'Brooklyn', brooklyns_path %>
+        <%= link_to 'Bronx', brons_path %>
+        <%= link_to 'Queens', queens_path %>
+        <%= link_to 'Statenisland', statenislands_path %>
+
+        <%= link_to '診断', shindans_path %>
+
+        </div>
+    
+</header>
+
+<div class="sh-index-block">
+ 
+    <ul>
+    <h1>観光地オススメ診断</h1>
+    <h2>あなたに合ったニューヨークのおすすめ観光地を診断します！</h2>
+    <h3><%= link_to "診断をスタート", new_shindan_path, class: "link" %></h2>
+    </ul>
+
+</div>
