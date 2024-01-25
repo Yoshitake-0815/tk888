@@ -9,9 +9,8 @@ Rails.application.routes.draw do
   resources :tweets do
     resources :likes, only: [:create, :destroy]
   end
-  get "tweets/top" => "tweets#top"
-  root 'tweets#top'
-
+  
+  
   get "users" => "users#show"
 
   get 'manhattans' => 'manhattans#manhattan'
@@ -19,5 +18,7 @@ Rails.application.routes.draw do
   get 'queens' => 'queens#queen'
   get 'statenislands' => 'statenislands#statenisland'
   get 'brooklyns' => 'brooklyns#brooklyn'
+ 
+  root 'tweets#top'
 
   end
