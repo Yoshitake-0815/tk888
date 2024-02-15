@@ -1,5 +1,5 @@
 <header>
-      <div class="header">
+      <div class="header_container">
       <%= link_to root_path do %>
       NewYorkCityMap
       <% end %>
@@ -11,8 +11,8 @@
           <%= link_to "Mypage", user_path(current_user.id) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to "Login", tweets_path %>
-          <%= link_to "SignUp", new_user_registration_path %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Signin",  new_user_registration_path %>
         <% end %>
 
         <%= link_to 'Manhattan', manhattans_path %>
@@ -20,15 +20,23 @@
         <%= link_to 'Bronx', brons_path %>
         <%= link_to 'Queens', queens_path %>
         <%= link_to 'Statenisland', statenislands_path %>
-
         <%= link_to '診断', shindans_path %>
 
         </div>
-    
 </header>
 
+<div id="slider">
+<figure>
+<%= image_tag "ロックフェラーセンター.jpg" %>
+<%= image_tag "ブロードウェイ.jpg", size: '730x730' %>
+<%= image_tag "タイムズスクエア.jpg", size: '730x730' %>
+<%= image_tag "トリニティチャーチ.jpg", size: '730x730' %>
+<%= image_tag "9.11メモリアル.jpg", size: '730x730' %>
+</figure>
+</div>
+
 <div class="manhattan-first-block">
-    <li></li>
+    <li><%= image_tag "manhattan.jpeg", size: '730x730' %></li>
 </div>
 
 <div class="manhattan-second-block">

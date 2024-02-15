@@ -1,16 +1,18 @@
 <header>
-       <div class="header">
-        <%= link_to root_path do %>
-         NewYorkCityMap
-        <% end %>
+      <div class="header_container">
+      <%= link_to root_path do %>
+      NewYorkCityMap
+      <% end %>
       
         
         <% if user_signed_in? %>
+        
+        
           <%= link_to "Mypage", user_path(current_user.id) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to "Login", tweets_path %>
-          <%= link_to "SignUp", new_user_registration_path %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Signin",  new_user_registration_path %>
         <% end %>
 
         <%= link_to 'Manhattan', manhattans_path %>
@@ -19,7 +21,8 @@
         <%= link_to 'Queens', queens_path %>
         <%= link_to 'Statenisland', statenislands_path %>
         <%= link_to '診断', shindans_path %>
-       </div>    
+
+        </div>
 </header>
 
 <div class="sh-new-block">

@@ -1,39 +1,44 @@
 <header>
-                <div class="header_container">
-                <%= link_to root_path do %>
-                NewYorkCityMap
-                <% end %>
-                
-                <% if user_signed_in? %>
-                
-                
-                <%= link_to "Mypage", user_path(current_user.id) %>
-                <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-                <% else %>
-                <%= link_to "Login", tweets_path %>
-                <%= link_to "SignUp", new_user_registration_path %>
-                <% end %>
+      <div class="header_container">
+      <%= link_to root_path do %>
+      NewYorkCityMap
+      <% end %>
+      
+        
+        <% if user_signed_in? %>
+        
+        
+          <%= link_to "Mypage", user_path(current_user.id) %>
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Signin",  new_user_registration_path %>
+        <% end %>
 
-                <%= link_to 'Manhattan', manhattans_path %>
-                <%= link_to 'Brooklyn', brooklyns_path %>
-                <%= link_to 'Bronx', brons_path %>
-                <%= link_to 'Queens', queens_path %>
-                <%= link_to 'Statenisland', statenislands_path %>
+        <%= link_to 'Manhattan', manhattans_path %>
+        <%= link_to 'Brooklyn', brooklyns_path %>
+        <%= link_to 'Bronx', brons_path %>
+        <%= link_to 'Queens', queens_path %>
+        <%= link_to 'Statenisland', statenislands_path %>
+        <%= link_to '診断', shindans_path %>
 
-                <%= link_to '診断', shindans_path %>
+        </div>
 </header>
 
-<div id="slider">
-<figure>
-<img src="https://24.media.tumblr.com/61e1f6d73861cfad6e320c6d5dcecc6e/tumblr_mx3trrzUOJ1st5lhmo1_1280.jpg" alt="">
-<img src="https://31.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg" alt="">
-<img src="https://25.media.tumblr.com/d7c46e775fa6d6c613f10bceb2703b38/tumblr_mx3tqsqckF1st5lhmo1_1280.jpg" alt="">
-<img src="https://31.media.tumblr.com/3afad829ce330a66b3bbb98831c1c393/tumblr_mx3tpto69r1st5lhmo1_1280.jpg" alt="">
-<img src="https://25.media.tumblr.com/d7c46e775fa6d6c613f10bceb2703b38/tumblr_mx3tqsqckF1st5lhmo1_1280.jpg" alt="">
-</figure>
+<div  class="top-first-block">
+  <div class="tf-name">
+
+    <h1>Empire State Of Mind</h1>
+    <p>New York City</p>
+    
+    <div class="tf-music">
+      <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="150" style="width:40%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E3%82%A8%E3%83%B3%E3%83%91%E3%82%A4%E3%82%A2-%E3%82%B9%E3%83%86%E3%82%A4%E3%83%88-%E3%82%AA%E3%83%96-%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%89-feat-%E3%82%A2%E3%83%AA%E3%82%B7%E3%82%A2-%E3%82%AD%E3%83%BC%E3%82%BA/1440932327?i=1440932750"></iframe>
+    </div class="tf-music">
+
+  </div class="tf-name">
 </div>
 
-<div  class="top-first-block">
+<div  class="top-second-block">
 
  <ul>
   <li><%= link_to 'Manhattan', manhattans_path %></li>

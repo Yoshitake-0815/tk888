@@ -11,8 +11,8 @@
           <%= link_to "Mypage", user_path(current_user.id) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
         <% else %>
-          <%= link_to "Login", new_tweet_path %>
-          <%= link_to "SignUp", new_user_registration_path %>
+          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Signin",  new_user_registration_path %>
         <% end %>
 
         <%= link_to 'Manhattan', manhattans_path %>
@@ -25,15 +25,27 @@
         </div>
 </header>
 
-  <h1>自分の題名</h1>
-  <h3>一覧ページ</h3>
+<div class="tweet-first-block">
   <%= link_to "新規投稿へ", new_tweet_path %>
-<div class="tweets-container">
   <% if user_signed_in? %>
-    <%= link_to "My Page", user_path(current_user.id) %>
+  <%= link_to "My Page", user_path(current_user.id) %>
   <% end %>
+</div>
 
-  <%= link_to "診断機能へ", shindans_path %>
+<div class="tweet-second-block">
+  <ul>
+  <li>Bronx</li>
+  <li>Queens</li>
+  <li>Manhattan</li>
+  <li>Brooklyn</li>
+  <li>Staten Island</li>
+  </ul>
+</div>
+
+
+  
+
+
 
 
 

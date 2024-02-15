@@ -11,9 +11,9 @@ class TweetsController < ApplicationController
 
     def new
         @tweet = Tweet.new
-     end
+    end
     
-      def create
+    def create
         tweet = Tweet.new(tweet_params)
 
         tweet.user_id = current_user.id
@@ -23,15 +23,15 @@ class TweetsController < ApplicationController
         else
           redirect_to :action => "new"
         end
-      end
+    end
 
-      def show
-        @tweet = Tweet.find(params[:id])
-      end
+    def show
+      @tweet = Tweet.find(params[:id])
+    end
     
-      private
-      def tweet_params
-        params.require(:tweet).permit(:name, :about, :image)
-      end
+    private
+    def tweet_params
+      params.require(:tweet).permit(:name, :about, :image)
+    end
 
 end

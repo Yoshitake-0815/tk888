@@ -11,6 +11,43 @@ header a{
 }
 
 .top-first-block{
+    background-image: url("brooklyn.bridge1.png");
+    background-size: cover; /* 画像を要素にカバーさせる */
+    background-position: center center; /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
+    height:95vh;
+}
+
+.tf-name h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding-top: 140px;
+    font-size: 80px;
+    text-align: center;
+    color:rgb(3, 128, 128);
+    width: 1000px;
+    height: 20px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.tf-name p {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    font-size: 80px;
+    text-align: center;
+    color:rgb(3, 128, 128);
+    margin: 5px;
+}
+
+.tf-music{
+    padding-left: 900px;
+    padding-top: 245px;
+}
+
+.top-second-block{
     height:100vh;
     background-color:antiquewhite;
     display: flex;
@@ -26,6 +63,14 @@ header a{
 }
 
 .ma-second-block{
+    display: flex;
+}
+
+.tweet-first-block{
+    display: flex;
+}
+
+.tweet-second-block{
     display: flex;
 }
 
@@ -53,4 +98,13 @@ header a{
       font-size: 0;
       animation: 30s slidy infinite; 
     }
-    
+
+.tweet{
+    display: flex;
+}
+
+
+
+.tweet ul{
+    list-style: none;
+}
