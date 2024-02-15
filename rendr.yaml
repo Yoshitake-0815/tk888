@@ -1,12 +1,12 @@
 databases:
   - name: nycmap_db
-    databaseName: nycmap
-    user: New York City Map
+    databaseName: nycmap_db_lurx
+    user: nycmap
     region: singapore
 
 services:
   - type: web
-    name: New York City Map
+    name: nycmap
     env: ruby
     region: singapore
     plan: free
