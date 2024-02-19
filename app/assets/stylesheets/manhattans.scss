@@ -11,11 +11,15 @@
 }
 
 .manhattan-first-block{
-    background-image: url("new york.webp");
+    background-image: url("");
     background-size: cover; /* 画像を要素にカバーさせる */
     background-position: center center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
     height:95vh;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+
 }
 
 .manhattan-second-block{
@@ -23,7 +27,7 @@
     font-family:'Times New Roman', Times, serif;
     height:100vh;
     text-align: center;
-    font-size:80px;
+    font-size:100px;
 }
 
 .manhattan-third-block ul{

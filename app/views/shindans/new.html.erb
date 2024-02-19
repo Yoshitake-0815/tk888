@@ -27,59 +27,151 @@
 
 <div class="sh-new-block">
 
-    <ul>
-    <%= form_for(@shindan, class: 'form-horizontal', role: 'form') do |f| %>
-        <div class="shindan-container">
-            
-            <div class="col-12">
-                <p>Q1. 遊び方…</p>
+<header id="commonHeader">
+<section id="flowsHead" class="wf-mplus1p">あなたにあった観光地が1分でわかる</section>
+<section id="flows" class="wf-mplus1p">観光地診断</section>
+</header>
+
+<div id="wrapper">
+   <div class="sense">
+        <article id="pageBody">
+
+            <div class="point_box">
+            <div class="box">
+            <div class="txt">
+            <p>1分だけ下記の質問に答えてみてください。あなたにぴったりの観光地がわかります!</p>
+            </div>
+            </div>
             </div>
 
-            <div class="col-6">
-                <%= f.radio_button :question1, "1", id: "custom_id1" %>
-                <label for="custom_id1">インドア派だ</label>
-                <%= f.radio_button :question1, "2", id: "custom_id2" %>
-                <label for="custom_id2">アウトドア派だ</label>
-            </div>
 
-            <div class="col-12">
-                <p>Q2. 自分の価値観として近い方は…</p>
-            </div> 
+            <ul class="qalist wf-mplus1p">
 
-            <div class="col-6">
-                <%= f.radio_button :question2, "1", id: "custom_id3" %>
-                <label for="custom_id3">体を動かすことが好きだ</label>
-                <%= f.radio_button :question2, "2", id: "custom_id4" %>
-                <label for="custom_id4">考えることが好きだ</label>
-            </div>   
+            <li id="1" class="question">
+                <a name="#1"></a>
+                <div class="qbox"><span  class="q">Q.</span>あなたは〜ですか?</div>
+                <div class="qabox">
+                    <a href="#2" onclick="show(2)" class="qabtn"><div class="btnBox btnBox_y">YES</div></a>
+                    <a href="#3" onclick="show(3)" class="qabtn"><div class="btnBox btnBox_n">NO</div></a>
+                </div>
+            </li>
+            <li id="2" class="question" style="display:none;">
+                <a name="#"></a>
+                <div class="qbox"><span  class="q">Q.</span>〜ですか？</div>
+                <div class="qabox">
+                    <a href="#101" onclick="show(101)" class="qabtn"><div class="btnBox btnBox_y">YES</div></a>
+                    <a href="#102" onclick="show(102)" class="qabtn"><div class="btnBox btnBox_n">NO</div></a>
+                </div>
+            </li>
+            <li id="3" class="question" style="display:none;">
+                <a name="#"></a>
+                <div class="qbox"><span  class="q">Q.</span>〜ですか？</div>
+                <div class="qabox">
+                    <a href="#103" onclick="show(103)" class="qabtn"><div class="btnBox btnBox_y">YES</div></a>
+                    <a href="#104" onclick="show(104)" class="qabtn"><div class="btnBox btnBox_n">NO</div></a>
+                </div>
+            </li>
+            </ul>
 
-            <div class="col-12">
-                <p>Q3. 人と接するときは…</p>
-            </div>
+            <div class="answerList">
 
-            <div class="col-6">
-                <%= f.radio_button :question3, "1", id: "custom_id5" %>
-                <label for="custom_id5">相手の話をよく聞く方だ</label>
-                <%= f.radio_button :question3, "2", id: "custom_id6" %>
-                <label for="custom_id6">自分の話をよくする方だ</label>
-            </div>
-        
-            <div class="col-12">
-                <p>Q4. 大切にしたいのは…</p>
-            </div>
+                <div id="101" style="display:none;" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める観光地は<span class="fs-18"><span class="bg-y">『〇〇〇〇』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明会文「タイトル」</p>
+<p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もっと詳しくみる</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div id="102" style="display:none;" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める〇〇は<span class="fs-18"><span class="bg-y">『〇〇』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もっと詳しくみる</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div id="103" style="display:none;" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める〇〇は<span class="fs-18"><span class="bg-y">『〇〇』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もっと詳しくみる</a></p>
+                    </div>
+                    </div>
+                </div>
+                <div id="104" style="display:none;" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたに勧める〇〇は<span class="fs-18"><span class="bg-y">説明文「タイトル」</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+<p>詳細を記載</p>
+                    </div>
+                    </div>
+                </div>
 
-            <div class="col-6">
-                <%= f.radio_button :question4, "1", id: "custom_id7" %>
-                <label for="custom_id7">論理性だ</label>
-                <%= f.radio_button :question4, "2", id: "custom_id8" %>
-                <label for="custom_id8">情緒だ</label>
-            </div>
-            
-        </div>
-        <div class="sindanbotan">
-            <%= f.submit " 結果を見る " %>
-        </div>
-    <% end %>
-    </ul>
+
+
+        </article>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+   $('a[href^=#]').click(function() {
+      var speed = 600;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+$(function(){
+    h = $(window).height();
+    h = h-30;
+    $(".question").css("min-height", h + "px");
+    $(".answerList .box").css("min-height", h + "px");
+    
+});
+function show(idName){ 
+    $("#" + idName).show();
+}
+
+</script>
+
+
+</body>
+</html>
 
 </div>

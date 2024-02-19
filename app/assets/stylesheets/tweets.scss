@@ -6,12 +6,11 @@ a{
 }
 
 header a{
-    background-color:white;
-    color: black;
+    color:rgb(3, 128, 128);
 }
 
 .top-first-block{
-    background-image: url("brooklyn.bridge1.png");
+    background-image: url("S__4014083.jpg");
     background-size: cover; /* 画像を要素にカバーさせる */
     background-position: center center; /* 画像を中央に配置 */
     background-repeat: no-repeat; /* 画像の繰り返しを無効化 */
@@ -42,18 +41,48 @@ header a{
     margin: 5px;
 }
 
-.tf-music{
-    padding-left: 900px;
-    padding-top: 245px;
+.top-second-block{
+    height:150vh;
+    background-color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:70px;
 }
 
-.top-second-block{
-    height:100vh;
-    background-color:antiquewhite;
-    display: flex;
-    gap:300px;
+.ts-text{
+    padding-top: 100px;
+    padding-left: 200px;
     font-family: 'Times New Roman', Times, serif;
-    font-size:80px;
+}
+
+.ts-pic{
+    margin:auto;
+    vertical-align: bottom;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+
+.img_wrap{
+    border: 1px solid #ddd;
+    width: 300px;
+    height: 226px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .img_wrap img{
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  .img_wrap:hover img{
+    opacity: 0.6;
+    transition-duration: 0.3s;
+  }
+  
+
+.ts-pic2{
+    margin: 0 auto;
+    vertical-align: bottom;
+    padding-left: 200px;
 }
 
 .second-block ul{
@@ -108,3 +137,16 @@ header a{
 .tweet ul{
     list-style: none;
 }
+
+a:hover {
+    color: red;
+  }
+  
+a:active {
+    color: green;
+  }
+
+a:visited{
+    color:rgb(3, 128, 128);
+}
+

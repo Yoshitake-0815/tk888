@@ -26,9 +26,27 @@
 </header>
 
 <div class="sh-index-block">
-    <ul>
-      <h1>観光地オススメ診断</h1>
-      <h2>あなたに合ったニューヨークのおすすめ観光地を診断します！</h2>
-      <h3><%= link_to "診断をスタート", new_shindan_path, class: "link" %></h2>
-    </ul>
+
+  <div class="si1">
+    
+  </div>
+  
+  <div class="si2">
+
+    <div class="si2-daimei">
+    観光地オススメ診断
+    </div>
+    
+    <div class="si2-setsumei">
+    あなたに合ったニューヨークの<br>おすすめ観光地を診断します！
+    </div>
+
+    <div class=si2-link>
+      <a class="no-color-change" href="http://localhost:3000/shindans" target="_blank" rel="noopener noreferrer">
+      <p><%= link_to "診断スタート", new_shindan_path, class: "link" %></p>
+      </a>
+    </div>
+      
+  </div>
+
 </div>
